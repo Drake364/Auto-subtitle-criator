@@ -24,6 +24,7 @@ import {
   Tv,
 } from 'lucide-react';
 import { SAMPLE_VIDEOS } from '../data/sampleData';
+import { MemoryUsageMonitor } from './MemoryUsageMonitor';
 import { VideoItem, VideoMode, OfflineEngine, LongVideoSettings, LongVideoProgress, AutoSaveConfig } from '../types';
 
 interface UploadAndGeneratePanelProps {
@@ -298,6 +299,9 @@ export const UploadAndGeneratePanel: React.FC<UploadAndGeneratePanelProps> = ({
           </button>
         </div>
       )}
+
+      {/* MONITOR DE MEMÓRIA ANTI-OOM EM TEMPO REAL */}
+      <MemoryUsageMonitor videoMode={videoMode} isProcessing={isGenerating} />
 
       {/* GAVETA DE CONFIGURAÇÕES AVANÇADAS DO VÍDEO LONGO */}
       {videoMode === 'long' && showLongSettings && (
