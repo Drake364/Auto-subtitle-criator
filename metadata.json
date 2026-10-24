@@ -1,0 +1,10 @@
+{
+  "name": "LegendaFácil AI",
+  "description": "Gerador e editor profissional de legendas automáticas com IA para vídeos, tradução para português, estilos para TikTok/Reels, tutoriais interativos e monetização.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
